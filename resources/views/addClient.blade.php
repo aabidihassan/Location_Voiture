@@ -7,7 +7,7 @@
                    <div class="row-cols-2 d-flex justify-content-between mb-4" >
                     <!-- Page Heading -->
                     <div class="col-8">
-                        <a class="btn btn-primary" href="/table" role="button">List des Clients</a>
+                        <a class="btn btn-primary" href="/clients" role="button">List des Clients</a>
                         <a class="ml-md-4 btn btn-primary" href="/addClient" role="button">Ajouter Client </a>
                     </div>
                     <div class="col-4 d-none">

@@ -12,15 +12,7 @@
                     </div>
                     <form class="col-4 form-inline navbar-search d-flex justify-content-between">
 
-                            <div class=" dropdown mr-1">
-                                <button type="button" class="btn btn-outline-primary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-                                    select
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                                    <a class="dropdown-item" href="#">CNI</a>
-                                    <a class="dropdown-item" href="#">NOM</a>
-                                </div>
-                            </div>
+                            
                             <div class="col input-group  ">
                                 <input type="text" class="form-control  border-1 border-primary"
                                     placeholder="Search for..." aria-label="Search"
@@ -52,7 +44,6 @@
                                             <th>Adresse</th>
                                             <th>Télé</th>
                                             <th>Pérmis</th>
-                                            <th  class="d-flex justify-content-center">Etat</th>
                                         </tr>
                                     </thead>
                                   
@@ -62,8 +53,9 @@
                                            <tr>
                                            <td>{{$list['nom']}}</td>
                                             <td>{{$list['prenom']}}</td>
-                                            <td>{{$list['adresse']}}</td>
-                                            <td> {{$list['tele']}} </td>
+                                            <td>{{$list['CNI']}}</td>
+                                            <td> {{$list['adresse']}} </td>
+                                            <td>{{$list['tele']}}</td>
                                             <td>{{$list['permis']}}</td>
                                            </tr>
                                         @endforeach

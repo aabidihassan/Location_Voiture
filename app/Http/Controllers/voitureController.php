@@ -43,7 +43,7 @@ class voitureController extends BaseController
          $v->carburant = $req->carburant;
          $v->model = $req->model;
          $v->img = $req->img;
-         $v->id_mark = 0;
+         $v->id_mark = $req->marke;
          $v->save();
 
          $data = voiture::join('markes', 'markes.id_mark', '=', 'voitures.id_mark')->get();

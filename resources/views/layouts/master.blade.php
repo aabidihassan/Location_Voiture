@@ -70,7 +70,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="/table_c">
+        <a class="nav-link" href="/clients">
             <i class="fas fa-user"></i>
             <span>Clients</span></a>
     </li>

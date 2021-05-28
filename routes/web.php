@@ -38,6 +38,10 @@ Route::get('/table_c', function() {
     return view('editCars');
    });
 
+   Route::get('/clients', function(){
+      return clientController::listeClients();
+   })->name('/clients');
+
    
    Route::get('/Cars', function() {
     return voitureController::listeVoitures();
