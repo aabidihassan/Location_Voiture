@@ -23,6 +23,7 @@ Route::get('/', function() {
    });
 
 
+
 /*Route::get('/indexAdmin', function() {
  return view('indexAdmin');
 });*/
@@ -80,3 +81,16 @@ Route::get('/table_c', function() {
 
    Route::post('storeclient', [clientController::class, 'storeclient'])->name('storeclient');
     Route::get('deleteVoiture/{id_v}',[voitureController::class, 'deleteVoiture']);
+
+   // Clients Routes
+   Route::get('/index_client', function() {
+      return view('index_client');
+     });
+     Route::get('/Voiture', function() {
+      return view('nos_voitures');
+     });
+     Route::get('/markes', function() {
+      return view('nos_markes');
+     });
+  
+  

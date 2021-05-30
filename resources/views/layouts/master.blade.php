@@ -84,6 +84,11 @@
             <i class="fas fa-chart-pie"></i>
             <span>Réservations</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/Réservation">
+            <i class="fas fa-chart-pie"></i>
+            <span>Markes</span></a>
+    </li>
     
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
