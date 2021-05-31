@@ -16,4 +16,5 @@ class voiture extends Model
         'img',
         'id_mark'
     ];
+    protected $primaryKey = 'id_v';
 }

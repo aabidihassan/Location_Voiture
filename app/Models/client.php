@@ -16,8 +16,10 @@ class client extends Model
         'nom',
         'prenom',
         'permis',
+        'adresse',
         'CNI',
         'tele',
         'id_us'
     ];
+    protected $primaryKey = 'id_clients';
 }
