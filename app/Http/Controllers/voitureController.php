@@ -36,7 +36,7 @@ class voitureController extends BaseController
     public function storeVoiture(Request $req){
         
          $v = new voiture;
-         $v->id_v = $req->id_v;
+         $v->id_v = 0;
          $v->matricule = $req->matricule;
          $v->date_achat = $req->date_achat;
          $v->kms = $req->kms;
@@ -76,7 +76,13 @@ class voitureController extends BaseController
         return back(); // redirect('indexAdmin');
  }
 
+ public function destroy($id)
+ {
+     voiture::table('cars')->delete($id);
+     return redirect('/Cars');
+ }
 
+// ****************************************************************************
  public function storeModele()
  {
      $data=Input::all();
@@ -101,26 +107,25 @@ class voitureController extends BaseController
         return view("gestion.marques", compact('marques'));
     }
 
-    public function deleteMarque(Request $request){
-        $marque=Marque::where('libelle', $request->input('marque'))->first();
-        $marque->delete();
-        return back();
-    }
+    
     public function deleteVoiture($id_v){
         $data =voiture::find($id_v);
         $data ->delete();
-        return redirect('table_car');
+        return redirect('/Cars');
     }
+    public function editVoiture($id_v){
+        
+        $data= voiture::find($id_v);
+        return view('editCars',['data'=>$data]);
+    }
+
+
     // public function deleteVoiture($matricule){
     //     Voiture::whereId($matricule)->delete();
     //     return back();
     // }
     
-    public function deleteModele(Request $request){
-        $modele=Modele::where('libelle', $request->input('modele'))->first();
-        $modele->delete();
-        return back();
-    }
+  
 
     public function confirmReservation($id){
         Reservation::whereId($id)->update(['confirmed' => 1 ]);

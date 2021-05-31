@@ -44,6 +44,7 @@
                                             <th>Adresse</th>
                                             <th>Télé</th>
                                             <th>Pérmis</th>
+                                            <th>Etas</th>
                                         </tr>
                                     </thead>
                                   
@@ -57,6 +58,11 @@
                                             <td> {{$list['adresse']}} </td>
                                             <td>{{$list['tele']}}</td>
                                             <td>{{$list['permis']}}</td>
+                                            </td>
+                                            <td class="d-flex justify-content-center">
+                                            <a class="btn btn-danger"  class="btn mr-3" href={{"deleteClient/" .$list['id_clients']}}> <i class="far fa-trash-alt"></i> </a>
+                                            <a class="btn btn-success" class="btn mr-3" href="#"><i class="fas fa-user-edit"></i> </a>
+                                            </td>
                                            </tr>
                                         @endforeach
                                         

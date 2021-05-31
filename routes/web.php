@@ -14,7 +14,7 @@ use App\Http\Controllers\clientController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function() {
+Route::get('/index_Admin', function() {
     return view('indexAdmin');
    });
 
@@ -42,7 +42,7 @@ Route::get('/table_c', function() {
    Route::get('/clients', function(){
       return clientController::listeClients();
    })->name('/clients');
-
+ 
    
    Route::get('/Cars', function() {
     return voitureController::listeVoitures();
@@ -68,11 +68,16 @@ Route::get('/table_c', function() {
    Route::get('/addCom', function() {
     return view('addR');
    });
-  
+   
    Route::post('/addVoiture', 'voitureController@storeVoiture')->name('voiture.store');
 
    Route::post('storeVoiture', [voitureController::class, 'storeVoiture'])->name('storeVoiture');
+   
+   Route::get('deleteVoiture/{id_v}',[voitureController::class, 'deleteVoiture']);
 
+   Route::get('editVoiture/{id_v}',[voitureController::class, 'editVoiture']);
+
+   
    Route::post('register', [UserController::class, 'register'])->name('register');
 
    Route::post('login', [UserController::class, 'login'])->name('login');
@@ -80,7 +85,11 @@ Route::get('/table_c', function() {
    Route::post('/addClient', 'clientController@storeclient')->name('client.store');
 
    Route::post('storeclient', [clientController::class, 'storeclient'])->name('storeclient');
-    Route::get('deleteVoiture/{id_v}',[voitureController::class, 'deleteVoiture']);
+ 
+   Route::get('deleteClient/{id_clients}',[clientController::class, 'deleteClient']);
+
+
+
 
    // Clients Routes
    Route::get('/index_client', function() {

@@ -62,6 +62,10 @@
                                             <td>{{$row['nom_marke']}}</td>
                                            
                                             </td>
+                                            <td class="d-flex justify-content-center">
+                                            <a class="btn btn-danger"  class="btn mr-3" href={{"deleteVoiture/" .$row['id_v']}}> <i class="far fa-trash-alt"></i> </a>
+                                            <a class="btn btn-success" class="btn mr-3" href={{"editVoiture/" .$row['id_v']}}><i class="fas fa-user-edit"></i> </a>
+                                            </td>
                                            </tr>
                                         @endforeach
                                         

@@ -18,16 +18,16 @@
                     
                     <div class="container mt-4">
                         <form action="" method='post' class="container">
-                        
+                        @csrf
                         <div class="row">
                                 <div class="mt-2 col-md-6">
                                     <input required type="text" class="form-control"
                                 placeholder="Matricule" 
-                                aria-describedby="basic-addon2" name="matricule">
+                                aria-describedby="basic-addon2" name="matricule" value="{{$data['matrficule']}}" >
                                 </div>
                             
                                 <div class="mt-2 col-md-6">
-                                    <select name="carburant">
+                                    <select name="carburant" value="{{$data['carburant']}}">
                                         <option value="0">Essence</option>
                                         <option value="1">Diesel</option>
                                     </select>
@@ -36,27 +36,31 @@
                                     <div class="mt-2 col-md-6">
                                             <input required type="date" class="form-control"
                                         placeholder="" 
-                                        aria-describedby="basic-addon2"name="date_achat">
+                                        aria-describedby="basic-addon2"name="date_achat" value="{{$data['date_achat']}}">
                                     </div>
                                     <div class="mt-2 col-md-6">
                                     <input required type="text" class="form-control"
                                 placeholder="Modéle" 
-                                aria-describedby="basic-addon2" name="model">
+                                aria-describedby="basic-addon2" name="model" value="{{$data['matrficule']}}">
                                 </div>
                                 <div class="mt-2 col-md-6">
                                     <input required type="number" class="form-control"
                                 placeholder="kms"  
-                                aria-describedby="basic-addon2" name="kms">
+                                aria-describedby="basic-addon2" name="kms" value="{{$data['kms']}}">
                                 </div> 
                                 <div class="mt-2 col-md-6">
-                                    <input required type="text" class="form-control"
-                                placeholder="mark"  
-                                aria-describedby="basic-addon2" name="mark">
-                                </div> 
-                                <div class="mt-2 col">
+                            <!--
+                                ewa o hna dert boucla 3la dik la liste li fiha les markes bach yb9a y7et liya les nom ta3homask
+                                -->
+                                <select name="marke">
+                                    @foreach($list as $row)
+                                        <option value="{{$row['id_mark']}}">{{$row['nom_marke']}}</option>
+                                    @endforeach
+                                </select>
+                            </div>                                <div class="mt-2 col">
                                     <input required type="file" class="form-control"
                                 
-                                aria-describedby="basic-addon2" name="img">
+                                aria-describedby="basic-addon2" name="img" value="{{$data['img']}}">
                                 </div>
                                 <div class="mt-2 col-md-2">
                                     <input required type="submit" class="btn btn-success form-control"

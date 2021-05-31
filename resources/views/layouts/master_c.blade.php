@@ -36,7 +36,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Agence</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!"> Nos Voitures</a></li>
+                                <li><a class="dropdown-item" href=""> Nos Voitures</a></li>
                                 <li><hr class="dropdown-divider" /></li>
                                 <li><a class="dropdown-item" href="#!">Nos Markes</a></li>
                             </ul>
@@ -65,8 +65,8 @@
                 </div>
             </div>
        @yield('content')
-        <!--  @yield('content1')
-        @yield('content2')
+        @yield('content1')
+         <!-- @yield('content2')
         @yield('content3')
         @yield('content4') 
         @yield('content5')
